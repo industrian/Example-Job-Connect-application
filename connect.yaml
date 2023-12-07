@@ -1,7 +1,7 @@
 deployAs:
   - name: NewestArrivals
     applicationType: job
-    endpoint: /job
+    endpoint: /NewestArrivals
     properties:
       schedule: "0 0 * * 1"
     configuration:
@@ -19,7 +19,7 @@ deployAs:
           description: Your commercetools Composable Commerce API Client scope
   - name: CustomerConfirmEmail
     applicationType: event
-    endpoint: /event
+    endpoint: /CustomerConfirmEmail
     scripts:
       postDeploy: npm install && npm run build && npm run connector:post-deploy
       preUndeploy: npm install && npm run build && npm run connector:pre-undeploy
