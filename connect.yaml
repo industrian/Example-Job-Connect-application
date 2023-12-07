@@ -1,0 +1,38 @@
+deployAs:
+  - name: NewestArrivals
+    applicationType: job
+    endpoint: /job
+    properties:
+      schedule: "0 0 * * 1"
+    configuration:
+      standardConfiguration:
+        - key: CTP_REGION
+          description: Your commercetools Composable Commerce Region
+      securedConfiguration:
+        - key: CTP_PROJECT_KEY
+          description: Your commercetools Composable Commerce Project key
+        - key: CTP_CLIENT_ID
+          description: Your commercetools Composable Commerce API Client ID
+        - key: CTP_CLIENT_SECRET
+          description: Your commercetools Composable Commerce API Client secret
+        - key: CTP_SCOPE
+          description: Your commercetools Composable Commerce API Client scope
+  - name: CustomerConfirmEmail
+    applicationType: event
+    endpoint: /event
+    scripts:
+      postDeploy: npm install && npm run build && npm run connector:post-deploy
+      preUndeploy: npm install && npm run build && npm run connector:pre-undeploy
+    configuration:
+      standardConfiguration:
+        - key: CTP_REGION
+          description: Your commercetools Composable Commerce Region
+      securedConfiguration:
+        - key: CTP_PROJECT_KEY
+          description: Your commercetools Composable Commerce Project key
+        - key: CTP_CLIENT_ID
+          description: Your commercetools Composable Commerce API Client ID
+        - key: CTP_CLIENT_SECRET
+          description: Your commercetools Composable Commerce API Client secret
+        - key: CTP_SCOPE
+          description: Your commercetools Composable Commerce API Clientscope
