@@ -1,5 +1,4 @@
 import { Router } from 'express';
-
 import { post } from '../controllers/job.controller';
 
 // Create the router for our app
@@ -13,5 +12,6 @@ jobRouter.post('/', async (req, res, next) => {
     next(error);
   }
 });
+
 
 export default jobRouter;

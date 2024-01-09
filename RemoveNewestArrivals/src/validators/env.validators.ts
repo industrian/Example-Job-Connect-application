@@ -29,6 +29,16 @@ const envValidators = [
     { min: 32, max: 32 }
   ),
 
+  standardString(
+    ['new_arrivals_category_id'],
+    {
+      code: 'InvalidUUID',
+      message: 'Category id is invalid.',
+      referencedBy: 'environmentVariables',
+    },
+    { min: 36, max: 36 }
+  ),
+
   standardKey(['projectKey'], {
     code: 'InvalidProjectKey',
     message: 'Project key should be a valid string.',
