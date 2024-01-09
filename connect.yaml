@@ -1,7 +1,7 @@
 deployAs:
-  - name: removeNewestArrivals
+  - name: removeFromCategory
     applicationType: job
-    endpoint: /removeNewestArrivals
+    endpoint: /removeFromCategory
     properties:
       schedule: "0 0 * * 1"
     configuration:

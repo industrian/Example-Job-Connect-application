@@ -22,7 +22,7 @@ const app: Express = express();
 app.disable('x-powered-by');
 
 // Define routes
-app.use('/removeNewestArrivals', JobRoutes);
+app.use('/removeFromCategory', JobRoutes);
 
 // Global error handler
 app.use(errorMiddleware);
