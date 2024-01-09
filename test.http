@@ -1,1 +1,1 @@
-POST http://localhost:8080/removeFromCategory
+POST http://localhost:8080/removefromcategory

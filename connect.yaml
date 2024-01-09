@@ -1,7 +1,7 @@
 deployAs:
-  - name: removeFromCategory
+  - name: removefromcategory
     applicationType: job
-    endpoint: /removeFromCategory
+    endpoint: /removefromcategory
     properties:
       schedule: "0 0 * * 1"
     configuration:
