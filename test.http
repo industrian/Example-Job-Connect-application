@@ -1,1 +1,1 @@
-POST http://localhost:8080/RemoveNewestArrivals
+POST http://localhost:8080/removeNewestArrivals

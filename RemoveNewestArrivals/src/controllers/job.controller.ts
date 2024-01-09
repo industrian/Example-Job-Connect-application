@@ -15,7 +15,7 @@ import { readConfiguration } from '../utils/config.utils';
 export const post = async (_request: Request, response: Response) => {
   try {
 
-    logger.info(`Running job to remove old new arrivals.`);
+    logger.info(`Running job to remove Products from Category.`);
 
     const categoryId:string =readConfiguration().new_arrivals_category_id;
     const today = new Date();
@@ -38,6 +38,8 @@ export const post = async (_request: Request, response: Response) => {
     {
     await removeCategoryFromProduct(product.id,product.version,categoryId);
     }
+
+    logger.info(`Finished removing Products created before ${toDate.toDateString()} in category: ${categoryId}`);
 
     response.status(200).send();
   } catch (error) {
